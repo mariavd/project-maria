@@ -3,7 +3,7 @@ def reverse_words(s):
     Reverses order or words in string s.
     """
     words = s.split()
-    words_reversed = words[::-1]
+    words_reversed = words[::1]
     return ' '.join(words_reversed)
 
 
