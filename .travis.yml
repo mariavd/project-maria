@@ -17,7 +17,7 @@ script:
     then py.test -vv example.py --cov example.py;
     else py.test -vv example.py;
     fi   
-  - pep8
+  - pep8 example.py
 
 after_success:
   - if [[ $TRAVIS_PYTHON_VERSION == 2.7 ]];
