@@ -10,13 +10,14 @@ python:
   - 3.5
 
 install:
-  - pip install pytest pytest-cov python-coveralls
+  - pip install pytest pytest-cov python-coveralls pep8
 
 script:
   - if [[ $TRAVIS_PYTHON_VERSION == 2.7 ]];
     then py.test -vv example.py --cov example.py;
     else py.test -vv example.py;
-    fi
+    fi   
+    pep8 
 
 after_success:
   - if [[ $TRAVIS_PYTHON_VERSION == 2.7 ]];
